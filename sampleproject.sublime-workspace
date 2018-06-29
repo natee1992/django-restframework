@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"mu",
+				"musics\tstatement"
+			],
+			[
 				"ur",
 				"urlpatterns\tstatement"
 			],
@@ -444,10 +448,6 @@
 				"setattr\tfunction"
 			],
 			[
-				"mu",
-				"multipartparser\tmodule"
-			],
-			[
 				"h",
 				"http\tmodule"
 			],
@@ -519,6 +519,26 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "sampleproject/MyApp/views.py",
+			"settings":
+			{
+				"buffer_size": 324,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "from django.views.generic.base import View\n\nfrom .models import Music\n\n\nclass MusicListView(View):\n    '''\n    通过django的view获取商品列表页\n    '''\n    def get(self,request):\n        json_list = []\n        musics = Music.objects.all()[:10]\n        for music in musics:\n            json_dict = {}\n            json_dict['']\n",
+			"file": "sampleproject/MyApp/view_base.py",
+			"file_size": 43,
+			"file_write_time": 131747344245375468,
+			"settings":
+			{
+				"buffer_size": 314,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -612,6 +632,7 @@
 	],
 	"file_history":
 	[
+		"/Users/Natee/git_project/django-restframework/sampleproject.sublime-project",
 		"/Users/Natee/project/sampleproject/MyApp/views.py",
 		"/Users/Natee/project/sampleproject/MyApp/serializers.py",
 		"/Users/Natee/project/sampleproject/MyApp/models.py",
@@ -739,6 +760,80 @@
 	"groups":
 	[
 		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "sampleproject/MyApp/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 324,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								324,
+								324
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sampleproject/MyApp/view_base.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 314,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								311,
+								311
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
 			"sheets":
 			[
 			]
@@ -761,6 +856,12 @@
 				0,
 				1,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
 			]
 		],
 		"cols":
@@ -771,6 +872,7 @@
 		"rows":
 		[
 			0.0,
+			0.5,
 			1.0
 		]
 	},

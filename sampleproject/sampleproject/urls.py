@@ -18,6 +18,7 @@ from django.contrib import admin
 from rest_framework.routers import DefaultRouter
 
 from MyApp import views
+from MyApp.view_base import MusicListView
 
 router = DefaultRouter()
 router.register('music', views.MusicViewSet)
@@ -26,5 +27,6 @@ router.register('music', views.MusicViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='restframework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='restframework')),
+    url(r'^musics/', MusicListView.as_view())
 ]
